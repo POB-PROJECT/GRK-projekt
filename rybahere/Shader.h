@@ -4,6 +4,7 @@
 #include <iostream>
 #include <fstream>
 #include "Transform.h"
+#include "Camera.h"
 
 class Shader
 {
@@ -11,7 +12,7 @@ public:
 	Shader(const std::string& fileName);
 	virtual ~Shader();
 	void Bind();
-	void Update(const Transform& transform);
+	void Update(const Transform& transform, const Camera& camera);
 private:
 	static const unsigned int NUM_SHADERS = 2;
 
